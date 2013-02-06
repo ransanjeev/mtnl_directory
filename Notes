@@ -1,0 +1,6 @@
+Notes
+success. You can now start the database server using:
+
+    postgres -D /usr/local/var/postgres
+or
+    pg_ctl -D /usr/local/var/postgres -l logfile start

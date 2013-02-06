@@ -1,0 +1,19 @@
+<div ng-controller='TasksCtrl'>
+	<ul>
+		<li ng-repeat="name in names">
+			{{name.name}}, {{name.address}}
+		</li>
+	</ul>
+</div>
+Please enter the name of a person:
+<%= text_field_tag 'person_name' %>
+
+
+<script>
+$(function() {
+  $("#person_name" ).autocomplete({
+    source: "<%= directory_entry_autocomplete_person_name_path %>"
+  });
+})
+</script>
+
