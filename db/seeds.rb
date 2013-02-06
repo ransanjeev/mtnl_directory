@@ -8,9 +8,7 @@
 #
 #
 
-1000.times do
-    DirectoryEntry.create :name => "#{Faker::Name.first_name} #{Faker::Name.last_name}", :address=>"fake", :phone=>"112"
+File.open("db/datafile.txt").each do |line|
+	temp = line.split('|')
+	DirectoryEntry.create :name => temp[1], :address=>temp[2], :phone=>temp[3]
 end
-
-File.open("/Users/sanjeevrana/test_programs/out")
-DirectoryEntry.create :name => "", :address=>"", :phone=>"112"

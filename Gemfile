@@ -34,6 +34,8 @@ gem 'unicorn'
 
 # Deploy with Capistrano
 gem 'capistrano'
+gem 'rvm-capistrano', '1.3.0.rc1'
+gem 'capistrano-nginx'	
 
 # To use debugger
 gem 'pg'
