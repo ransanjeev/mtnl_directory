@@ -27,8 +27,8 @@ set :repository, "git@github.com:ransanjeev/mtnl_directory.git"
 set :scm, :git
 set :branch, "master"
 # set :deploy_via, :copy
- # set :repository_cache, "git_cache"
- # set :deploy_via, :remote_cache
+ set :repository_cache, "git_cache"
+ set :deploy_via, :remote_cache
  set :ssh_options, { :forward_agent => true }
 set :normalize_asset_timestamps, false
 
@@ -44,7 +44,7 @@ set :deploy_to, "/home/#{user}/apps/#{application}"
 role :web, "ec2-107-21-67-161.compute-1.amazonaws.com" 
 role :db, "ec2-107-21-67-161.compute-1.amazonaws.com" , primary:true
 role :app, "ec2-107-21-67-161.compute-1.amazonaws.com" 
-
+set :assets_role, [:app]
   
 #ssh options
 set :ssh_options, {:forward_agent => true}
