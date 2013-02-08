@@ -27,10 +27,10 @@ set :repository, "git@github.com:ransanjeev/mtnl_directory.git"
 set :scm, :git
 set :branch, "master"
 # set :deploy_via, :copy
- set :repository_cache, "git_cache"
- set :deploy_via, :remote_cache
+ # set :repository_cache, "git_cache"
+ # set :deploy_via, :remote_cache
  set :ssh_options, { :forward_agent => true }
-
+set :normalize_asset_timestamps, false
 
 #user
 set :application, "mtnl_directory"
