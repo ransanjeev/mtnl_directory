@@ -1,7 +1,7 @@
 class DirectoryEntryController < ApplicationController
 	respond_to :html, :json 
   def index
-		# respond_with(DirectoryEntry.user_index('sanjeev'))
+		respond_with(DirectoryEntry.user_index('term'))
   end
 
   def autocomplete_person_name
